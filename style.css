@@ -44,6 +44,13 @@ h3 { font-size: 14px; color: #444; margin-bottom: 10px; }
 .btn-outline:hover { background: #f0f0f0; }
 
 /* ===== Results ===== */
+.results-content { display: block; }
+.results-empty {
+  padding: 32px 20px; text-align: center; background: #f8f8ff;
+  border-radius: 8px; color: #999; font-size: 15px; line-height: 1.7;
+  border: 1px dashed #ddd;
+}
+.results-empty p { margin: 0; }
 .copy-list { list-style: none; }
 .copy-list li {
   padding: 12px 14px; margin-bottom: 8px; background: #fff;

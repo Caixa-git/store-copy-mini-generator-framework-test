@@ -63,6 +63,11 @@ function generateCopies(shopName, category, location, strengths, targetCustomer,
 function renderResults(results) {
   lastResults = results;
   const section = document.getElementById('resultsSection');
+  const empty = document.getElementById('resultsEmpty');
+  const content = document.getElementById('resultsContent');
+
+  empty.style.display = 'none';
+  content.style.display = 'block';
   section.style.display = 'block';
 
   renderCopyList('introList', results.intros);
@@ -121,7 +126,10 @@ function fillForm(shop) {
 
 function resetForm() {
   document.querySelectorAll('.form-group input').forEach(el => el.value = '');
-  document.getElementById('resultsSection').style.display = 'none';
+  const section = document.getElementById('resultsSection');
+  section.style.display = 'none';
+  document.getElementById('resultsContent').style.display = 'none';
+  document.getElementById('resultsEmpty').style.display = 'block';
   showToast('입력값이 초기화되었습니다.');
 }
 
