@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가게 문구 미니 생성기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✏️ 가게 문구 미니 생성기</h1>
+      <p class="subtitle">가게 정보를 입력하면 인스타그램과 네이버 플레이스에 바로 쓸 수 있는 홍보 문구를 만들어 드려요</p>
+    </header>
+
+    <section class="input-section">
+      <h2>가게 정보 입력</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="shopName">가게명</label>
+          <input type="text" id="shopName" placeholder="예: 모모네일">
+        </div>
+        <div class="form-group">
+          <label for="category">업종</label>
+          <input type="text" id="category" placeholder="예: 네일샵, 카페, 미용실">
+        </div>
+        <div class="form-group">
+          <label for="location">지역</label>
+          <input type="text" id="location" placeholder="예: 성수, 연남동, 강남">
+        </div>
+        <div class="form-group">
+          <label for="strengths">가게 장점 (쉼표로 구분)</label>
+          <input type="text" id="strengths" placeholder="예: 손상 적은 케어, 1:1 예약제">
+        </div>
+        <div class="form-group">
+          <label for="targetCustomer">타겟 고객</label>
+          <input type="text" id="targetCustomer" placeholder="예: 깔끔한 네일을 원하는 직장인">
+        </div>
+        <div class="form-group">
+          <label for="contactMethod">예약/문의 방식</label>
+          <input type="text" id="contactMethod" placeholder="예: 인스타 DM 예약, 전화 예약">
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="generateBtn" class="btn-primary">문구 생성하기</button>
+        <button id="sampleBtn" class="btn-secondary">샘플 가게 불러오기</button>
+        <button id="resetBtn" class="btn-outline">초기화</button>
+      </div>
+    </section>
+
+    <section class="results-section" id="resultsSection" style="display:none;">
+      <h2>생성된 문구</h2>
+
+      <div class="result-group">
+        <h3>한 줄 소개문</h3>
+        <ul id="introList" class="copy-list"></ul>
+      </div>
+
+      <div class="result-group">
+        <h3>인스타그램 프로필 문구</h3>
+        <ul id="profileList" class="copy-list"></ul>
+      </div>
+
+      <div class="result-group">
+        <h3>예약/문의 CTA</h3>
+        <ul id="ctaList" class="copy-list"></ul>
+      </div>
+
+      <div class="result-group">
+        <h3>리뷰 답글 템플릿</h3>
+        <ul id="reviewList" class="copy-list"></ul>
+      </div>
+    </section>
+
+    <section class="sample-section" id="sampleSection" style="display:none;">
+      <h2>샘플 가게 선택</h2>
+      <div id="sampleButtons" class="sample-grid"></div>
+    </section>
+
+    <section class="notice-section">
+      <div class="notice-box">
+        <p>⚠️ 이 데모는 실제 인스타그램 자동 크롤링이나 자동 DM 발송을 하지 않습니다. 모든 문구는 사용자가 직접 확인 후 복사해서 사용하는 방식입니다. 모든 샘플 데이터는 가상 데이터입니다.</p>
+      </div>
+    </section>
+
+    <section class="next-section">
+      <h2>다음 단계</h2>
+      <p>생성된 문구를 복사해서 인스타그램 프로필, 네이버 플레이스 소개글, 리뷰 답글에 바로 붙여넣기 하세요. 더 많은 기능이 필요하다면 문구 생성 규칙을 업종별로 확장할 수 있습니다.</p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
